@@ -1,0 +1,40 @@
+{
+  "name": "gl-render-text",
+  "version": "0.0.0",
+  "description": "Renders text to a WebGL texture",
+  "main": "text.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "bit-twiddle": "~0.0.2",
+    "gl-texture2d": "~0.1.4"
+  },
+  "devDependencies": {
+    "gl-now": "~0.0.4",
+    "a-big-triangle": "~0.0.0",
+    "gl-shader": "~0.0.6"  
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/gl-render-text.git"
+  },
+  "keywords": [
+    "text",
+    "webgl",
+    "string",
+    "font",
+    "render",
+    "texture"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "4cb314c513a00b9f1963b1400bff8415f9d9321f",
+  "bugs": {
+    "url": "https://github.com/mikolalysenko/gl-render-text/issues"
+  }
+}
