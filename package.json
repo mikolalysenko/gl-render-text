@@ -1,6 +1,6 @@
 {
   "name": "gl-render-text",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Renders text to a WebGL texture",
   "main": "text.js",
   "directories": {

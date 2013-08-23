@@ -6,16 +6,16 @@ var drawCanvas = document.createElement("canvas")
 var drawContext = drawCanvas.getContext("2d")
 
 function makeColorString(rgb) {
-  return "#" + rgb.map(function(x) {
+  return "rgba(" + rgb.map(function(x) {
     if(x < 0) {
-      return "00"
+      return "0"
     } else if(x < 16) {
-      return "0" + (x|0).toString(16)
+      return 255.0*x
     } else if(x >= 255) {
-      return "ff"
+      return "255"
     }
     return (x|0).toString(16)
-  }).join("")
+  }, "1.0").join("")
 }
 
 function createText(gl, str, options) {
@@ -26,7 +26,7 @@ function createText(gl, str, options) {
   var fontColor = options.color || [0,0,0]
   var fontStyle = options.style ? options.style + " " : ""
   var font = [fontStyle, fontSize, "px", fontFamily].join("")
-
+  
   drawContext.font = font
   drawContext.textAlign = "center"
   drawContext.textBaseline = "middle"
@@ -38,8 +38,7 @@ function createText(gl, str, options) {
   drawCanvas.width = w
   drawCanvas.height = h
   
-  drawContext.fillStyle = "rgba(0,0,0,0)"
-  drawContext.fillRect(0, 0, w, h)
+  drawContext.clearRect(0, 0, w, h)
   
   drawContext.fillStyle = makeColorString(fontColor)
   drawContext.font = font
