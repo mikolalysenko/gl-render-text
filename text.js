@@ -50,7 +50,12 @@ function createText(gl, str, options) {
   texture.generateMipmap()
   texture.magFilter = gl.LINEAR
   texture.minFilter = gl.LINEAR_MIPMAP_LINEAR
-  
+  texture.roi = {
+    x: (w - dims.width)/2.0,
+    y: (h - fontSize)/2.0,
+    w: dims.width,
+    h: fontSize,
+  };
   return texture
 }
 
