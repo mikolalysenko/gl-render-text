@@ -15,7 +15,7 @@ function makeColorString(rgb) {
       return "255"
     }
     return (x|0).toString(16)
-  }, "1.0").join("")
+  }).join(",") + ", 1.0)";
 }
 
 function createText(gl, str, options) {
